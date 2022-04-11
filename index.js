@@ -1,5 +1,6 @@
 const { Engine, Render, Runner, World, Bodies } = Matter;
 
+const cells = 3;
 const width = 600;
 const height = 600;
 
@@ -27,6 +28,30 @@ const walls = [
 World.add(world, walls);
 
 // Maze generation
-const grid = Array(3).fill(null).map(() => Array(3).fill(false));
+const grid = Array(cells).fill(null).map(() => Array(cells).fill(false));
+const verticals = Array(cells).fill(null).map(() => Array(cells - 1).fill(false));
+const horizontals = Array(cells - 1).fill(null).map(() => Array(cells).fill(false));
 
-console.log(grid)
+const startRow = Math.floor(Math.random() * cells);
+const startColumn = Math.floor(Math.random() * cells);
+
+const stepThroughCell = (row, column) => {
+    // if i have visited [row, column] then return
+
+    // mark this cell as being visited
+
+    //Assemble randomly-ordered list of neighbours
+
+    // for each neighbour..
+
+    // check if neighbour is out of bounds
+
+    //check is neighbour has been visited
+
+    // remove wall from horisontals or verticals
+
+    // visit that next neighbour
+
+};
+
+stepThroughCell(startRow, startColumn);
